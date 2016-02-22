@@ -1,24 +1,24 @@
-# INDEX
-get "/video"
-  erb :"videos/index"
-end
+# # INDEX
+# get "/video"
+#   erb :"videos/index"
+# end
 
-# NEW
-
-
-
-
-# CREATE
-
-
-
-# SHOW
-
-
-
-# EDIT
+# # NEW
 
 
 
 
-# UPDATE
+# # CREATE
+
+
+
+# # SHOW
+
+
+
+# # EDIT
+
+
+
+
+# # UPDATE

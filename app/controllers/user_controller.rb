@@ -51,3 +51,15 @@ put '/users/:id' do
     erb :'users/show'
   end
 end
+
+# destroy
+# put '/users/:id/delete' do
+#   authorize!
+#   @user = User.find(params[:id])
+#   if @user.delete(params[:user])
+#     flash[:success] = "Are you sure you want to delete your profile?"
+#     yes = user.destroy
+#   else no 
+#   redirect('/users')
+# end
+# end
