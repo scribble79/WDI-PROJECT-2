@@ -1,7 +1,7 @@
 #index
 get '/users' do 
   # authorize!  
-  @users = User.all 
+  @user = User.all
   erb :'users/index'
 end
 

@@ -1,20 +1,20 @@
 #index
 get '/videos' do 
-authorize!
+# authorize!
   @videos = Video.all 
   erb :'videos/index'
 end
 
 #new
 get '/videos/new' do
-authorize! 
+# authorize! 
   @video = Video.new 
   erb :'videos/new'
 end
 
 #create
 post '/videos' do 
-  authorize!
+  # authorize!
   @video = Video.new(params[:video])
   if @video.save
     redirect "/videos"
@@ -26,7 +26,7 @@ end
 
 #show
 get '/videos/:id' do 
-  authorize!
+  # authorize!
   @video = Video.find(params[:id])
   if @video
     erb :'videos/show'
@@ -37,14 +37,14 @@ end
 
 #edit
 get "/videos/:id/edit" do 
-  authorize!
+  # authorize!
   @video = Video.find(params[:id])
   erb :'videos/edit'
 end
 
 #update
 put '/videos/:id' do 
-  authorize!
+  # authorize!
   @video = Video.find(params[:id])
   if @video.update(params[:user])
     redirect "/videos/#{@video.id}"
@@ -55,7 +55,7 @@ end
 
 # destroy
 delete '/videos/:id' do
-  authorize!
+  # authorize!
   @video = Video.find(params[:id])
   if @video.destroy
     redirect('/videos')

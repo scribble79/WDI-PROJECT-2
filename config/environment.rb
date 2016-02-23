@@ -10,12 +10,12 @@ use Sass::Plugin::Rack
 register Sinatra::AssetPack
 assets do 
   js :application, [
-  '/js/jquery.2.2.0.min.js',
   '/js/app.js'
-]
-css :application, [
-'/stylesheets/style.css'
-]
+  ]
+  css :application, [
+  '/bower_components/pure/pure-min.css',
+  '/stylesheets/style.css'
+  ]
 js_compression :jsmin     # :jsmin | :yui | :closure | :uglify
 css_compression :simple   # :simple | :sass | :yui | :sqwish
 end
