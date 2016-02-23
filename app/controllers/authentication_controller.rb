@@ -11,7 +11,7 @@ post '/register' do
   if @user.save
     session[:user_id] = @user.id 
     flash[:success] = "Shout it loud, shout it proud!"
-    redirect '/users'
+    redirect '/users/#{@user.id}'
   else
     erb :'authentications/new'
   end

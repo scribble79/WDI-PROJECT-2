@@ -1,1 +1,11 @@
 <h2>Edit Video</h2>
+
+<form action='/videos/<%= "#{@video.id}" %>' method="post">
+  <label for="video[name]">Video Name:</label>
+  <input name="video[name]" value='<%= "#{@video.name}" %>'>
+
+  <label for="video[photo_url]">Video URL:</label>
+  <input name="video[photo_url]" value='<%= "#{@video.video_url}" %>'>
+
+  <input type="submit" value="Create">
+</form>
