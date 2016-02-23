@@ -12,6 +12,8 @@ gem "rake"
 gem "pg"
 gem "sass"
 gem "sinatra-assetpack"
+gem "carrierwave"
+gem 'carrierwave-video-thumbnailer'
 gem "bcrypt"
 
 group :development do 
