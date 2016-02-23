@@ -1,1 +1,23 @@
 <h2>All Videos Feed</h2>
+
+<ul class="media-list">
+ <% @video.each do |video| %>
+   <li class="media">
+     <div class="media-left">
+       <a href="/videos/<%= video.id %>">
+         <% if video.image %>
+           <img class="media-object" src="<%= video.image %>" alt="<%= video.videoname %>'s image">
+         <% else %>
+           <img class="media-object" src="/images/default.png" alt="<%= video.videoname %>'s image">
+         <% end %>
+       </a>
+     </div>
+     <div class="media-body">
+       <a href="/videos/<%= video.id %>">
+         <h4 class="media-heading"><%= video.videoname %></h4>
+       </a>
+       <%= user.email %>
+     </div>
+   </li>
+ <% end %>
+</ul>

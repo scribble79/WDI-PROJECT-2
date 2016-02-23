@@ -18,7 +18,7 @@ post '/login' do
   #otherwise render the login form again
   flash[:danger] = "Username or password incorrect"
   redirect "/login"
-end
+  end
 end
 
 #destroy the session

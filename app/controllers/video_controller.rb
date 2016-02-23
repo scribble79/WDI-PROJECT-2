@@ -19,8 +19,7 @@ post '/videos' do
   if @video.save
     redirect "/videos"
   else 
-    erb :'videos/new'
-    # erb :'users/index' && :'videos/index'
+    erb :'videos/index'
   end
 end
 
