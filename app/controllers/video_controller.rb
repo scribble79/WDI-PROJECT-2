@@ -17,6 +17,7 @@ post '/videos' do
   authorize!
   @video = Video.new(params[:video])
   if @video.save
+    @video.user = current_user
     redirect "/videos"
   else 
     erb :'videos/index'

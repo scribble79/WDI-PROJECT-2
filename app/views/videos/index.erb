@@ -1,22 +1,19 @@
 <h2>All Videos Feed</h2>
 <ul class="media-list">
- <% @video.each do |video| %>
-   <li class="media">
+  <% @videos.each do |video| %>
+    <li class="media">
      <div class="media-left">
        <a href="/videos/<%= video.id %>">
-         <% if video.image %>
-           <img class="media-object" src="<%= video.image %>" alt="<%= video.videoname %>'s image">
-         <% else %>
-           <img class="media-object" src="/images/default.png" alt="<%= video.videoname %>'s image">
+         <% if video.url %>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.url %>" frameborder="0" allowfullscreen></iframe>
          <% end %>
        </a>
      </div>
      <div class="media-body">
        <a href="/videos/<%= video.id %>">
-         <h4 class="media-heading"><%= video.videoname %></h4>
+         <h4 class="media-heading"><%= video.video_name %></h4>
        </a>
-       <%= user.email %>
      </div>
-   </li>
- <% end %>
+    </li>
+  <% end %>
 </ul>

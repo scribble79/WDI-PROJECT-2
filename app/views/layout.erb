@@ -6,6 +6,30 @@
 </head>
   <body>
     <header>
+
+      <div class="pure-menu pure-menu-horizontal">
+          <ul class="pure-menu-list">
+              <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Speak!</a></li>
+              <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                  <a href="#" id="menuLink1" class="pure-menu-link">Contact</a>
+                  <ul class="pure-menu-children">
+                      <li class="pure-menu-item"><a href="/" class="pure-menu-link">Home</a></li>
+                      <% if is_logged_in? %>
+                        <li class="pure-menu-item"><a class="pure-menu-link" href="/videos/new">Upload</a></li>
+                        <li class="pure-menu-item"><a class="pure-menu-link"  href="/videos">Feed</a></li>
+                        <li class="pure-menu-item"><a class="pure-menu-link"  href="/users/<%= current_user.id %>">Profile Page</a></li>
+                        <li class="pure-menu-item"><a class="pure-menu-link"  href="/users/<%= current_user.id %>">Profile</a></li>
+                        <li class="pure-menu-item"><a class="pure-menu-link"  href="/users/<%= current_user.id %>/edit">Edit Profile</a></li>
+                        <li class="pure-menu-item"><a class="pure-menu-link"  href="/logout">Logout</a></li>
+                      <% else %>
+                        <li class="pure-menu-item"><a class="pure-menu-link"  href="/register">Register</a></li>
+                        <li class="pure-menu-item"><a class="pure-menu-link"  href="/login">Login</a></li>
+                      <% end %> 
+                  </ul>
+              </li>
+          </ul>
+      </div>
+
       <nav class="navbar navbar-default">
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -23,7 +47,8 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
             <% if is_logged_in? %>
-            <li><a href="/videos/<%= current_user.id %>">Upload</a></li>
+            <li><a href="/videos/new">Upload</a></li>
+            <li><a href="/videos">Feed</a></li>
               <li><a href="/users/<%= current_user.id %>">Profile Page</a></li>
               
               <li class="dropdown">
@@ -31,7 +56,6 @@
                 <ul class="dropdown-menu">
                   <li><a href="/users/<%= current_user.id %>">Profile</a></li>
                   <li><a href="/users/<%= current_user.id %>/edit">Edit Profile</a></li>
-                  <li><a href="/users/<%= current_user.id %>/delete">Delete Profile</a></li>
                   <li><a href="/logout">Logout</a></li>
                 </ul>
               </li>

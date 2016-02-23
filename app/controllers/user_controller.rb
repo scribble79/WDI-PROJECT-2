@@ -57,6 +57,7 @@ delete '/users/:id' do
   authorize!
   @user = User.find(params[:id])
   if @user.destroy
+    session.clear
     redirect('/users')
   else 
     redirect "/users/#{@user.id}"

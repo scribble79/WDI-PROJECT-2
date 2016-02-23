@@ -1,1 +1,21 @@
 <h2>Upload Videos</h2>
+
+<form class="pure-form pure-form-aligned" action="/videos" method="POST">
+  <fieldset>
+    <div class="pure-control-group">
+      <label for="video[video_name]">Video Name</label>
+      <input name="video[video_name]" placeholder="Video Name">
+    </div>
+    <div class="pure-control-group">
+      <label for="video[description]">Description</label>
+      <textarea name="video[description]" placeholder="Description"></textarea>
+    </div>
+    <div class="pure-control-group">
+      <label for="video[url]">URL</label>
+      <input name="video[url]" placeholder="URL">
+    </div>
+    <div class="pure-controls">
+      <button type="submit" class="pure-button pure-button-primary">Add</button>
+    </div>
+  </fieldset>
+</form>
