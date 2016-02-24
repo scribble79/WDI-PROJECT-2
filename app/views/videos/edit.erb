@@ -21,9 +21,13 @@
     <div class="pure-controls">
       <button type="submit" class="pure-button pure-button-primary">Edit Video</button>
     </div>
-    <div class="pure-controls">
-      <button class="pure-button pure-button-primary">Delete Video</button>
-    </div>
   </fieldset>
+</form>
+
+<form action="/videos/<%= @video.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <div class="pure-controls">
+    <button class="pure-button pure-button-primary">Delete Video</button>
+  </div>
 </form>
 

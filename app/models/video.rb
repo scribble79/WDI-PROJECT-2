@@ -1,9 +1,8 @@
-# require 'carrierwave/orm/activerecord'
-# require_relative '../uploaders/reel_uploader'
+require 'carrierwave/orm/activerecord'
+require_relative '../uploaders/video_uploader'
 
 class Video < ActiveRecord::Base
   belongs_to :user 
-
-
-  # mount_uploader :thumbnail, ReelUploader
+  
+  mount_uploader :url, VideoUploader
 end

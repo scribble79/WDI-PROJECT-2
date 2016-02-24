@@ -4,10 +4,12 @@
     <li class="media">
      <div class="media-left">
        <a href="/videos/<%= video.id %>">
-         <% if video.url %>
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.url %>" frameborder="0" allowfullscreen></iframe>
-         <% end %>
-       </a>
+        <% if video.url %>
+          <video controls>
+            <source src="<%= video.url.url %>" type="video/mp4">
+          </video>
+        <% end %>                     
+        </a>
      </div>
      <div class="media-body">
        <a href="/videos/<%= video.id %>">

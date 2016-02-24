@@ -10,9 +10,14 @@
 
 <% @user.videos.each do |video| %>
   <% if video.url %>
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.url %>" frameborder="0" allowfullscreen></iframe>
+  <video controls>
+    <source src="<%= video.url.url %>" type="video/mp4">
+  </video>
   <% end %>
 <% end %>
+
+
+
 
 <form action="/users/<%= @user.id %>" method="POST">
   <input type="hidden" name="_method" value="DELETE">
