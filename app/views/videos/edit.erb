@@ -1,11 +1,24 @@
 <h2>Edit Video</h2>
-
-<form action='/videos/<%= "#{@video.id}" %>' method="post">
-  <label for="video[name]">Video Name:</label>
-  <input name="video[name]" value='<%= "#{@video.name}" %>'>
-
-  <label for="video[photo_url]">Video URL:</label>
-  <input name="video[photo_url]" value='<%= "#{@video.video_url}" %>'>
-
-  <input type="submit" value="Create">
+<form class="pure-form pure-form-aligned" action="/videos/<%= @video.id %>" method="POST">
+  <fieldset>
+    <div class="pure-control-group">
+      <label for="video[video_name]">Video Name</label>
+      <input name="video[video_name]" placeholder="Video Name">
+    </div>
+    <div class="pure-control-group">
+      <label for="video[description]">Description</label>
+      <textarea name="video[description]" placeholder="Description"></textarea>
+    </div>
+    <div class="pure-control-group">
+      <label for="video[url]">URL</label>
+      <input name="video[url]" placeholder="URL">
+    </div>
+    <div class="pure-controls">
+      <button type="submit" class="pure-button pure-button-primary">Edit Video</button>
+    </div>
+    <div class="pure-controls">
+      <button class="pure-button pure-button-primary">Delete Video</button>
+    </div>
+  </fieldset>
 </form>
+

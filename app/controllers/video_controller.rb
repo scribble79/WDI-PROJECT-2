@@ -1,9 +1,23 @@
-#index
-get '/videos' do 
-authorize!
-  @videos = Video.all 
+get "/videos" do
+
+  if params[:search] && !params[:search].empty?
+    @videos = Video.where("video_name ILIKE :search OR url ILIKE :search OR user_id ILIKE :search", { search: "%#{params[:search]}%" })
+  else
+    authorize!
+    @videos = Video.all
+  end
+
   erb :'videos/index'
 end
+
+
+
+# #index
+# get '/videos' do 
+# authorize!
+#   @videos = Video.all 
+#   erb :'videos/index'
+# end
 
 #new
 get '/videos/new' do
