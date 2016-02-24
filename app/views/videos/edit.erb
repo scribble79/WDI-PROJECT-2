@@ -1,5 +1,5 @@
 <h2>Edit Video</h2>
-<form class="pure-form pure-form-aligned" action="/videos/<%= @video.id %>" method="POST" enctype="multipart/form-data">
+<form class="pure-form pure-form-aligned" action="/videos/<%= @video.id %>" method="POST">
   <input type="hidden" name="_method" value="PUT">
   <fieldset>
     <div class="pure-control-group">
@@ -8,7 +8,7 @@
     </div>
     <div class="pure-control-group">
       <label for="video[description]">Description</label>
-      <textarea name="video[description]" placeholder="Description"><%= @video.video_name %></textarea>
+      <textarea name="video[description]" placeholder="Description"><%= @video.description %></textarea>
     </div>
     <div class="pure-controls">
       <button type="submit" class="pure-button pure-button-primary">Edit Video</button>
