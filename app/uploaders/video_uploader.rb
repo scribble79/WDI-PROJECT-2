@@ -6,6 +6,6 @@ class VideoUploader < CarrierWave::Uploader::Base
   end
 
   def extension_whitelist
-    ["mp4"]
+    ["mp4", "m4v"]
   end
 end

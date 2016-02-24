@@ -38,6 +38,15 @@ post '/videos' do
   end
 end
 
+post '/videos' do
+  authorize!
+  @video = Video.new(params[:comment])
+  if @video.save
+    redirect "/videos"
+  else
+    erb :'videos/index'
+  end
+end
 
 #show
 get '/videos/:id' do 

@@ -13,15 +13,19 @@
   <video controls>
     <source src="<%= video.url.url %>" type="video/mp4">
   </video>
+  <div class="media-body">
+    <a href="/videos/<%= video.id %>">
+      <h4 class="media-heading"><%= video.video_name %></h4>
+    </a>
   <% end %>
 <% end %>
 
 
-
-
+    
 <form action="/users/<%= @user.id %>" method="POST">
   <input type="hidden" name="_method" value="DELETE">
   <div class="pure-controls">
     <button class="pure-button pure-button-primary">Delete My Account</button>
   </div>
 </form>
+
