@@ -1,5 +1,5 @@
 <h2>Edit Video</h2>
-<form class="pure-form pure-form-aligned" action="/videos/<%= @video.id %>" method="POST">
+<form class="pure-form pure-form-aligned" action="/videos/<%= @video.id %>" method="POST" enctype="multipart/form-data">
   <input type="hidden" name="_method" value="PUT">
   <fieldset>
     <div class="pure-control-group">
@@ -13,6 +13,10 @@
     <div class="pure-control-group">
       <label for="video[url]">URL</label>
       <input name="video[url]" placeholder="URL" value="<%= @video.url %>">
+    </div>
+    <div class="pure-control-group">
+      <label for="video[url]">URL</label>
+      <input name="video[url]" placeholder="URL" value="<%= @video.url %>" type="file">
     </div>
     <div class="pure-controls">
       <button type="submit" class="pure-button pure-button-primary">Edit Video</button>
