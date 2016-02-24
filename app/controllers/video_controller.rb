@@ -40,12 +40,22 @@ end
 
 post '/videos' do
   authorize!
-  @video = Video.new(params[:comment])
+  @video = Video.new(params[:comments])
   if @video.save
     redirect "/videos"
   else
     erb :'videos/index'
   end
+end
+
+post '/postcomment/:id' do
+  video = Video.find(params[:id])
+  all_former_comments = video.comments
+  thecomment = (params[:comments])
+  print thecomment
+  video.update(comments: (params[:comments]) + "|" + all_former_comments )
+  
+    redirect "/videos"
 end
 
 #show
@@ -76,6 +86,8 @@ put '/videos/:id' do
     erb :'videos/edit'
   end
 end
+
+
 
 # destroy
 delete '/videos/:id' do

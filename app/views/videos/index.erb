@@ -16,10 +16,10 @@
          <h4 class="media-heading"><%= video.video_name %></h4>
        </a>
      </div>
-     <form class="pure-form pure-form-aligned" id="register" method="post" action="/videos" enctype="multipart/form-data">
+     <p class="commentBox"><%= video.comments %></p>
+     <form class="pure-form pure-form-aligned" id="register" method="post" action="/postcomment/<%= video.id %>">
      <div class="pure-control-group">
-       <!-- <label for="video[comment]">Comment</label> -->
-       <textarea name="video[comment]" placeholder="comment"></textarea>
+       <textarea name="comments" placeholder="comment"></textarea>
      </div>
      <div class="pure-controls">
        <button type="submit" class="pure-button pure-button-primary">Add</button>
@@ -28,4 +28,12 @@
     </li>
   <% end %>
 </ul>
+<script>
+$( document ).ready(function() {
+    console.log( "ready!" );
+    
+   var splitComments = $(".commentBox").text()
+   $(".commentBox").html(splitComments.split("|").join('<br>'));
 
+});
+</script>
