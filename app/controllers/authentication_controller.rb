@@ -2,7 +2,6 @@
 get '/register' do 
   @user = User.new
   erb :'authentications/new'
-
 end
 
 # handle the form
@@ -11,7 +10,7 @@ post '/register' do
   if @user.save
     session[:user_id] = @user.id 
     flash[:success] = "Shout it loud, shout it proud!"
-    redirect '/users/#{@user.id}'
+    redirect "/users/#{@user.id}"
   else
     erb :'authentications/new'
   end

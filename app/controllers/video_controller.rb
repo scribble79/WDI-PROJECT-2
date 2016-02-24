@@ -30,8 +30,8 @@ end
 post '/videos' do 
   authorize!
   @video = Video.new(params[:video])
+  @video.user = current_user
   if @video.save
-    @video.user = current_user
     redirect "/videos"
   else 
     erb :'videos/index'
@@ -61,10 +61,10 @@ end
 put '/videos/:id' do 
   authorize!
   @video = Video.find(params[:id])
-  if @video.update(params[:user])
+  if @video.update(params[:video])
     redirect "/videos/#{@video.id}"
   else
-    erb :'videos/show'
+    erb :'videos/edit'
   end
 end
 

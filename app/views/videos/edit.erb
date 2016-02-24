@@ -1,17 +1,18 @@
 <h2>Edit Video</h2>
 <form class="pure-form pure-form-aligned" action="/videos/<%= @video.id %>" method="POST">
+  <input type="hidden" name="_method" value="PUT">
   <fieldset>
     <div class="pure-control-group">
       <label for="video[video_name]">Video Name</label>
-      <input name="video[video_name]" placeholder="Video Name">
+      <input name="video[video_name]" placeholder="Video Name" value="<%= @video.video_name %>">
     </div>
     <div class="pure-control-group">
       <label for="video[description]">Description</label>
-      <textarea name="video[description]" placeholder="Description"></textarea>
+      <textarea name="video[description]" placeholder="Description"><%= @video.video_name %></textarea>
     </div>
     <div class="pure-control-group">
       <label for="video[url]">URL</label>
-      <input name="video[url]" placeholder="URL">
+      <input name="video[url]" placeholder="URL" value="<%= @video.url %>">
     </div>
     <div class="pure-controls">
       <button type="submit" class="pure-button pure-button-primary">Edit Video</button>

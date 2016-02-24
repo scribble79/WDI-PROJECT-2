@@ -5,24 +5,6 @@ get '/users' do
   erb :'users/index'
 end
 
-#new
-get '/users/new' do
-  authorize! 
-  @user = User.new 
-  erb :'users/new'
-end
-
-#create
-post '/users' do 
-  authorize!
-  @user = User.new(params[:user])
-  if @user.save
-    redirect "/users"
-  else 
-    erb :'users/new'
-  end
-end
-
 #show
 get '/users/:id' do 
   authorize!
@@ -48,7 +30,7 @@ put '/users/:id' do
   if @user.update(params[:user])
     redirect "/users/#{@user.id}"
   else
-    erb :'users/show'
+    erb :'users/edit'
   end
 end
 

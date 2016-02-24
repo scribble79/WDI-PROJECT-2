@@ -1,7 +1,4 @@
-<h2><%= @user.username %></h2>
+<h2><%= @video.video_name %></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @video.url %>" frameborder="0" allowfullscreen></iframe>
 
-<% @user.videos.each do |video| %>
-  <% if video.url %>
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.url %>" frameborder="0" allowfullscreen></iframe>
-  <% end %>
-<% end %>
+<a href="/videos/<%= @video.id %>/edit">Edit Video</a>

@@ -1,6 +1,10 @@
 <h2>Upload Videos</h2>
 
-<form class="pure-form pure-form-aligned" action="/videos" method="POST">
+
+<form class="pure-form pure-form-aligned" id="register" method="post" action="/videos" enctype="multipart/form-data">
+
+<!-- <form class="pure-form pure-form-aligned" action="/videos" method="POST"> -->
+
   <fieldset>
     <div class="pure-control-group">
       <label for="video[video_name]">Video Name</label>
@@ -12,7 +16,7 @@
     </div>
     <div class="pure-control-group">
       <label for="video[url]">URL</label>
-      <input name="video[url]" placeholder="URL">
+      <input name="video[url]" placeholder="URL" type="file">
     </div>
     <div class="pure-controls">
       <button type="submit" class="pure-button pure-button-primary">Add</button>
