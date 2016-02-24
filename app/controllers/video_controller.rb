@@ -50,11 +50,10 @@ end
 
 post '/postcomment/:id' do
   video = Video.find(params[:id])
-  all_former_comments = video.comments
+  comments = video.comments
   thecomment = (params[:comments])
   print thecomment
-  video.update(comments: (params[:comments]) + "|" + all_former_comments )
-  
+  video.update(comments: << thecomment)
     redirect "/videos"
 end
 

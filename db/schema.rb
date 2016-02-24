@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223173720) do
+ActiveRecord::Schema.define(version: 20160224204615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20160223173720) do
     t.string "video_name"
     t.string "description"
     t.string "url"
-    t.string "comments"
     t.string "likes"
+    t.string "comments",    array: true
   end
 
 end
