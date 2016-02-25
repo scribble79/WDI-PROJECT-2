@@ -1,7 +1,5 @@
 .container { max-width: 1200px; margin: auto; }
 
-header { background-color: #FFFFFF; }
-
 ul { margin: 0; padding: 0; list-style-type: none; }
 
 .center { text-align: center; }
@@ -22,7 +20,7 @@ video#bgvid { position: fixed; top: 80%; left: 50%; min-width: 100%; min-height:
 
 video { width: 100%; height: auto; border-radius: 5px; box-shadow: 7px 7px 3px #888888; }
 
-header { height: 60px; line-height: 45px; position: relative; }
+header { height: 60px; line-height: 45px; position: relative; background-color: #FFFFFF; }
 header .right { position: absolute; right: 0; top: 0; }
 
 .pure-form-aligned .pure-controls { margin: 0 auto; }
@@ -36,6 +34,10 @@ header .right { position: absolute; right: 0; top: 0; }
 .showedit { padding: 10px; }
 
 textarea { width: 770px; height: 34px; border-radius: 0; }
+
+.textedit { width: 350px; height: 34px; border-radius: 0; }
+
+.textup { width: 350px; height: 34px; border-radius: 0; }
 
 li.media .form.pure-form.pure-form-aligned { display: inline-flex; }
 

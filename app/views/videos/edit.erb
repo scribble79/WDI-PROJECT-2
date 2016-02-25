@@ -8,7 +8,7 @@
     </div>
     <div class="pure-control-group">
       <label for="video[description]">Description</label>
-      <textarea name="video[description]" placeholder="Description"><%= @video.description %></textarea>
+      <textarea class="textedit" name="video[description]" placeholder="Description"><%= @video.description %></textarea>
     </div>
     <div class="pure-controls">
       <button type="submit" class="pure-button pure-button-primary">Edit Video</button>
@@ -19,7 +19,7 @@
 <form action="/videos/<%= @video.id %>" method="POST">
   <input type="hidden" name="_method" value="DELETE">
   <div class="pure-controls">
-    <button class="pure-button pure-button-primary">Delete Video</button>
+    <button class="pure-button">Delete Video</button>
   </div>
 </form>
 
