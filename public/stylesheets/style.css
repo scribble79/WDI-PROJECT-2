@@ -8,9 +8,11 @@ ul { margin: 0; padding: 0; list-style-type: none; }
 
 h2 { text-align: center; font-size: 50pt; font-family: 'Oswald', sans-serif; }
 
-.home { text-align: right; font-size: 80pt; }
+.home { text-align: right; font-size: 90pt; text-shadow: 2px 2px #888888; }
 
-.home1 { text-align: right; font-size: 50pt; }
+.home1 { text-align: right; font-size: 60pt; text-shadow: 2px 2px #888888; }
+
+h5 { font-size: 10pt; }
 
 p { text-align: center; font-size: 30pt; font-family: 'Oswald', sans-serif; }
 
@@ -33,7 +35,7 @@ header .right { position: absolute; right: 0; top: 0; }
 
 .showedit { padding: 10px; }
 
-textarea { width: 320px; height: 34px; border-radius: 0; }
+textarea { width: 770px; height: 34px; border-radius: 0; }
 
 li.media .form.pure-form.pure-form-aligned { display: inline-flex; }
 

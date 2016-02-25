@@ -18,7 +18,7 @@
       <form class="pure-form pure-form-aligned" method="POST" action="/videos/<%= video.id %>/comment">
       <input type="hidden" name="comment[video_id]" value="<%= video.id %>">
       <div class="pure-control-group">
-        <textarea name="comment[comment]" placeholder="comment"></textarea>
+        <textarea class="usercomment" name="comment[comment]" placeholder="comment"></textarea>
       </div>
       <div class="pure-controls">
         <button type="submit" class="pure-button pure-button-primary">Add</button>
