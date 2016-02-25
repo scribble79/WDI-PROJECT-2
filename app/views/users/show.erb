@@ -1,27 +1,32 @@
-<h2><%= @user.username %></h2>
-<% if @user.image %>
-  <img class="media-object" src="<%= @user.image %>" alt="<%= @user.username %>'s image">
-<% else %>
-  <img class="media-object" src="/images/default.png" alt="<%= @user.username %>'s image">
-<% end %>
-<p><%= @user.first_name %></p>
-<p><%= @user.last_name %></p>
-<p><%= @user.email %></p>
+<div class="pure-g center">
+  <div class="pure-u-1-4">
+    <h2><%= @user.username %></h2>
+    <% if @user.image %>
+      <img class="media-object" src="<%= @user.image %>" alt="<%= @user.username %>'s image">
+    <% else %>
+      <img class="media-object" src="/images/default.png" alt="<%= @user.username %>'s image">
+    <% end %>
+    <p><%= @user.first_name %></p>
+    <p><%= @user.last_name %></p>
+    <p><%= @user.email %></p>
+  </div>
 
-<% @user.videos.each do |video| %>
-  <% if video.url %>
-  <video controls>
-    <source src="<%= video.url.url %>" type="video/mp4">
-  </video>
-  <div class="media-body">
-    <a href="/videos/<%= video.id %>">
-      <h4 class="media-heading"><%= video.video_name %></h4>
-    </a>
-  <% end %>
-<% end %>
+  <div class="pure-u-3-4">
+    <% @user.videos.each do |video| %>
+      <% if video.url %>
+      <div class="media">
+        <a href="/videos/<%= video.id %>">
+        <h4 class="media-heading"><%= video.video_name %></h4>
+        </a>
+        <video controls>
+          <source src="<%= video.url.url %>" type="video/mp4">
+        </video>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 
-
-    
 <form action="/users/<%= @user.id %>" method="POST">
   <input type="hidden" name="_method" value="DELETE">
   <div class="pure-controls">

@@ -1,20 +1,20 @@
 <h2><%= @video.video_name %></h2>
-    <video controls>
-      <source class="pure-img" src="<%= @video.url.url %>" type="video/mp4">
-    </video>
+<div class="center">
+  <video controls>
+    <source class="pure-img" src="<%= @video.url.url %>" type="video/mp4">
+  </video>
+  <br>
+  <a href="/videos/<%= @video.id %>/edit">Edit Video</a>
 
-    <!-- <div class="pure-control-group">
-      <label for="video[description]">Description</label>
-      <textarea name="video[description]" placeholder="Description"><%= @video.description %></textarea>
-    </div> -->
+  <div class="pure-control-group">
+    <p><%= @video.description %></p>
+  </div>
 
-    <!-- <div class="pure-control-group">
-      <label for="video[description]">Description</label>
-      <source src="<%= @video.description %>" type="text">
-    </div> -->
 
-<a href="/videos/<%= @video.id %>/edit">Edit Video</a>
-
-<% @video.comments.each do |comment| %>
-  <%= comment.comment %>
-<% end %>
+  <h5>Comments</h5>
+  <ul>
+  <% @video.comments.each do |comment| %>
+      <li><p><%= comment.comment %></p></li>
+  <% end %>
+  </ul>
+</div>
