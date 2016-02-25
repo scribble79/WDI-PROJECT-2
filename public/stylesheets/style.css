@@ -1,18 +1,20 @@
 .container { max-width: 1200px; margin: auto; }
 
+header { background-color: #FFFFFF; }
+
 ul { margin: 0; padding: 0; list-style-type: none; }
 
 .center { text-align: center; }
 
-h2 { color: red; text-align: center; font-size: 50pt; }
+h2 { text-align: center; font-size: 50pt; font-family: 'Oswald', sans-serif; }
 
-p { color: red; text-align: center; font-size: 30pt; }
+p { text-align: center; font-size: 30pt; font-family: 'Oswald', sans-serif; }
 
-img { width: 15%; height: auto; border-radius: 5px; }
+img { width: 70%; height: auto; border-radius: 5px; box-shadow: 10px 10px 5px #888888; }
 
-video#bgvid { position: fixed; top: 80%; left: 50%; min-width: 50%; min-height: 50%; width: auto; height: auto; z-index: -100; -ms-transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); background: url(/images/test.jpg) no-repeat; background-size: cover; }
+video#bgvid { position: fixed; top: 80%; left: 50%; min-width: 100%; min-height: 100%; width: 130%; height: auto; z-index: -100; -ms-transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); background: url(/images/test.jpg) no-repeat; background-size: cover; }
 
-video { width: 70%; height: auto; }
+video { width: 100%; height: auto; border-radius: 5px; box-shadow: 7px 7px 3px #888888; }
 
 header { height: 60px; line-height: 45px; position: relative; }
 header .right { position: absolute; right: 0; top: 0; }
@@ -21,12 +23,16 @@ header .right { position: absolute; right: 0; top: 0; }
 
 .media { width: 70%; padding: 20px; margin: 50px auto; border-radius: 3px; }
 
-.media h4 { width: 70%; margin: 15px auto; text-align: left; }
+.media h4 { width: 95%; margin: 15px auto; text-align: left; }
 
-.media-body form { display: inline-flex; }
+.media-body form { display: inline-flex; padding: 10px; }
+
+.showedit { padding: 10px; }
 
 textarea { width: 320px; height: 34px; border-radius: 0; }
 
 li.media .form.pure-form.pure-form-aligned { display: inline-flex; }
+
+body { background: #ddd6f3; /* fallback for old browsers */ background: -webkit-linear-gradient(to left, #ddd6f3, #faaca8); /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(to left, #ddd6f3, #faaca8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
 
 /*# sourceMappingURL=style.css.map */

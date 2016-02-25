@@ -4,8 +4,9 @@
     <source class="pure-img" src="<%= @video.url.url %>" type="video/mp4">
   </video>
   <br>
+  <div class="showedit">
   <a href="/videos/<%= @video.id %>/edit">Edit Video</a>
-
+  </div>
   <div class="pure-control-group">
     <p><%= @video.description %></p>
   </div>
