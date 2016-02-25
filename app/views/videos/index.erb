@@ -5,7 +5,7 @@
      <div class="media-left">
        <a href="/videos/<%= video.id %>">
         <% if video.url %>
-          <video controls>
+          <video controls id="fdvid">
             <source src="<%= video.url.url %>" type="video/mp4">
           </video>
         <% end %>                     

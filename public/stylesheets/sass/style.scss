@@ -10,6 +10,13 @@ p {
   font-size: 30pt;
 }
 
+img {
+  width: 15%;
+  height: auto;
+  margin-left: 50px;
+  border-radius: 5px;
+}
+
 video#bgvid { 
     position: fixed;
     top: 80%;
@@ -25,5 +32,11 @@ video#bgvid {
     transform: translateX(-50%) translateY(-50%);
     background: url(/images/test.jpg) no-repeat;
     background-size: cover; 
+}
+
+video {
+  width: 70%;
+  height: auto;
+  margin-left: 150px;
 }
 
