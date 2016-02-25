@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224204615) do
+ActiveRecord::Schema.define(version: 20160225101753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string "video_id"
+    t.string "comment"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
@@ -32,7 +37,6 @@ ActiveRecord::Schema.define(version: 20160224204615) do
     t.string "description"
     t.string "url"
     t.string "likes"
-    t.string "comments",    array: true
   end
 
 end

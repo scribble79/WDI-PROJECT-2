@@ -3,16 +3,16 @@
 <fieldset>
   <input type="hidden" name="_method" value="put">
   <div class="pure-control-group">
+    <label for="username">Username</label>
+    <input name="user[username]" type="text" class="form-control" id="username" placeholder="Username" value="<%= @user.username %>">
+  </div>
+  <div class="pure-control-group">
     <label for="first_name">First name</label>
     <input name="user[first_name]" type="text" class="form-control" id="username" placeholder="First name" value="<%= @user.first_name %>">
   </div>
   <div class="pure-control-group">
     <label for="last_name">Last name</label>
     <input name="user[last_name]" type="text" class="form-control" id="username" placeholder="Last name" value="<%= @user.last_name %>">
-  </div>
-  <div class="pure-control-group">
-    <label for="username">Username</label>
-    <input name="user[username]" type="text" class="form-control" id="username" placeholder="Username" value="<%= @user.username %>">
   </div>
   <div class="pure-control-group">
     <label for="image">Image</label>

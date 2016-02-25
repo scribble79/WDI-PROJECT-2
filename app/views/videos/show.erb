@@ -3,5 +3,18 @@
       <source src="<%= @video.url.url %>" type="video/mp4">
     </video>
 
+    <!-- <div class="pure-control-group">
+      <label for="video[description]">Description</label>
+      <textarea name="video[description]" placeholder="Description"><%= @video.description %></textarea>
+    </div> -->
+
+    <!-- <div class="pure-control-group">
+      <label for="video[description]">Description</label>
+      <source src="<%= @video.description %>" type="text">
+    </div> -->
+
 <a href="/videos/<%= @video.id %>/edit">Edit Video</a>
 
+<% @video.comments.each do |comment| %>
+  <%= comment.comment %>
+<% end %>

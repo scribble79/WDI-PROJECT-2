@@ -16,10 +16,10 @@
          <h4 class="media-heading"><%= video.video_name %></h4>
        </a>
      </div>
-     <p class="commentBox"><%= video.comments %></p>
-     <form class="pure-form pure-form-aligned" id="register" method="post" action="/postcomment/<%= video.id %>">
+     <form class="pure-form pure-form-aligned" method="POST" action="/videos/<%= video.id %>/comment">
+     <input type="hidden" name="comment[video_id]" value="<%= video.id %>">
      <div class="pure-control-group">
-       <textarea name="comments" placeholder="comment"></textarea>
+       <textarea name="comment[comment]" placeholder="comment"></textarea>
      </div>
      <div class="pure-controls">
        <button type="submit" class="pure-button pure-button-primary">Add</button>

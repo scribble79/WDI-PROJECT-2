@@ -48,14 +48,11 @@ post '/videos' do
   end
 end
 
-# post '/postcomment/:id' do
-#   video = Video.find(params[:id])
-#   comments = video.comments
-#   thecomment = (params[:comments])
-#   print thecomment
-#   video.update(comments: << thecomment)
-#     redirect "/videos"
-# end
+post '/videos/:id/comment' do
+  comment = Comment.new(params[:comment])
+  comment.save
+  redirect "/videos/#{comment.video_id}"
+end
 
 #show
 get '/videos/:id' do 
