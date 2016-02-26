@@ -10,6 +10,8 @@ h2 { text-align: center; font-size: 50pt; font-family: 'Oswald', sans-serif; }
 
 .username { font-size: 50pt; text-shadow: 2px 2px #888888; }
 
+.videoname { text-shadow: 2px 2px #888888; }
+
 .userdetails { display: inline-flex; text-shadow: 2px 2px #888888; }
 
 .home { text-align: right; font-size: 90pt; text-shadow: 2px 2px #888888; }
@@ -41,7 +43,7 @@ header .right { position: absolute; right: 0; top: 0; }
 
 .usercomment { font-size: 20px; background: #F7F7FF; border-radius: 10px; }
 
-.commentdiv { background: #F7F7FF; border-radius: 10px; width: 500px; height: auto; position: relative; margin-left: 350px; border-style: solid; border-color: black; }
+.commentdiv { background: #F7F7FF; border-radius: 10px; width: 500px; height: auto; position: relative; margin-left: 350px; border-style: solid; border-color: black; padding: 10px; }
 
 .userdes { font-size: 50px; }
 
