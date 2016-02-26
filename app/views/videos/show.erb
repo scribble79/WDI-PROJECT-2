@@ -4,18 +4,15 @@
     <source class="pure-img" src="<%= @video.url.url %>" type="video/mp4">
   </video>
   <br>
-  <div class="showedit">
-  <a href="/videos/<%= @video.id %>/edit">Edit Video</a>
-  </div>
   <div class="pure-control-group">
-    <p><%= @video.description %></p>
+    <p class="userdes"><%= @video.description %></p>
   </div>
 
 
   <h5>Comments</h5>
   <ul>
   <% @video.comments.each do |comment| %>
-      <li><p><%= comment.comment %></p></li>
+      <li><p class="usercomment"><%= comment.comment %></p></li>
   <% end %>
   </ul>
 </div>

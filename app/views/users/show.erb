@@ -1,14 +1,17 @@
 <div class="pure-g center">
   <div class="pure-u-1-4">
-    <h2><%= @user.username %></h2>
+    
+    <div class="usercontainer">
     <% if @user.image %>
       <img class="media-object" src="<%= @user.image %>" alt="<%= @user.username %>'s image">
     <% else %>
       <img class="media-object" src="/images/default.png" alt="<%= @user.username %>'s image">
     <% end %>
-    <p><%= @user.first_name %></p>
-    <p><%= @user.last_name %></p>
-    <p><%= @user.email %></p>
+    <h3 class="username"><%= @user.username %></h2>
+    <p class="userdetails"><%= @user.first_name %></p>
+    <p class="userdetails"><%= @user.last_name %></p>
+    <!-- <p class="userdetails"><%= @user.email %></p> -->
+    </div>
   </div>
 
   <div class="pure-u-3-4">
@@ -21,6 +24,9 @@
         <video controls>
           <source src="<%= video.url.url %>" type="video/mp4">
         </video>
+        <div class="showedit">
+        <a href="/videos/<%= video.id %>/edit">Edit Video</a>
+        </div>
       </div>
       <% end %>
     <% end %>

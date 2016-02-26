@@ -1,10 +1,16 @@
 .container { max-width: 1200px; margin: auto; }
 
+.usercontainer { margin-top: 120px; background: #F7F7FF; padding: 10px; border-radius: 10px; border-style: solid; border-color: black; }
+
 ul { margin: 0; padding: 0; list-style-type: none; }
 
 .center { text-align: center; }
 
 h2 { text-align: center; font-size: 50pt; font-family: 'Oswald', sans-serif; }
+
+.username { font-size: 50pt; text-shadow: 2px 2px #888888; }
+
+.userdetails { display: inline-flex; text-shadow: 2px 2px #888888; }
 
 .home { text-align: right; font-size: 90pt; text-shadow: 2px 2px #888888; }
 
@@ -20,18 +26,22 @@ video#bgvid { position: fixed; top: 80%; left: 50%; min-width: 100%; min-height:
 
 video { width: 100%; height: auto; border-radius: 5px; box-shadow: 7px 7px 3px #888888; }
 
-header { height: 60px; line-height: 45px; position: relative; background-color: #FFFFFF; }
+header { height: 60px; line-height: 45px; position: relative; font-family: 'Montserrat', sans-serif; }
 header .right { position: absolute; right: 0; top: 0; }
 
 .pure-form-aligned .pure-controls { margin: 0 auto; }
 
 .media { width: 70%; padding: 20px; margin: 50px auto; border-radius: 3px; }
 
-.media h4 { width: 95%; margin: 15px auto; text-align: left; }
+.media h4 { width: 95%; margin: 15px auto; text-align: left; text-decoration: none; }
 
 .media-body form { display: inline-flex; padding: 10px; }
 
 .showedit { padding: 10px; }
+
+.usercomment { font-size: 20px; }
+
+.userdes { font-size: 50px; }
 
 textarea { width: 770px; height: 34px; border-radius: 0; }
 
@@ -42,5 +52,7 @@ textarea { width: 770px; height: 34px; border-radius: 0; }
 li.media .form.pure-form.pure-form-aligned { display: inline-flex; }
 
 body { background: #ddd6f3; /* fallback for old browsers */ background: -webkit-linear-gradient(to left, #ddd6f3, #faaca8); /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(to left, #ddd6f3, #faaca8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.pure-menu-horizontal { position: fixed; z-index: 1; background: #FFFFFF; }
 
 /*# sourceMappingURL=style.css.map */
