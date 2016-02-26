@@ -2,17 +2,19 @@
 <div class="center">
   <video controls>
     <source class="pure-img" src="<%= @video.url.url %>" type="video/mp4">
-  </video>
-  <br>
-  <div class="pure-control-group">
-    <p class="userdes"><%= @video.description %></p>
+    </video>
+    <br>
+    <div class="pure-control-group">
+      <p class="userdes"><%= @video.description %></p>
+    </div>
+
+
+    <h5>Comments</h5>
+    <div class="commentdiv">
+      <ul>
+        <% @video.comments.each do |comment| %>
+        <li><p class="usercomment"><%= comment.comment %></p></li>
+        <% end %>
+      </ul>
+    </div>
   </div>
-
-
-  <h5>Comments</h5>
-  <ul>
-  <% @video.comments.each do |comment| %>
-      <li><p class="usercomment"><%= comment.comment %></p></li>
-  <% end %>
-  </ul>
-</div>

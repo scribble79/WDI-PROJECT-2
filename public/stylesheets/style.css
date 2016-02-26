@@ -39,7 +39,9 @@ header .right { position: absolute; right: 0; top: 0; }
 
 .showedit { padding: 10px; }
 
-.usercomment { font-size: 20px; }
+.usercomment { font-size: 20px; background: #F7F7FF; border-radius: 10px; }
+
+.commentdiv { background: #F7F7FF; border-radius: 10px; width: 500px; height: auto; position: relative; margin-left: 350px; border-style: solid; border-color: black; }
 
 .userdes { font-size: 50px; }
 
