@@ -13,7 +13,7 @@
     <div class="commentdiv">
       <ul>
         <% @video.comments.each do |comment| %>
-        <li><p class="usercomment"><%= comment.comment %></p></li>
+        <li><p class="usercomment"><i class="fa fa-comment"></i><%= comment.comment %></p></li>
         <% end %>
       </ul>
     </div>
