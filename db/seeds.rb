@@ -14,8 +14,8 @@ Comment.destroy_all
     last_name: "Bharth",
     username: "snita",
     email: "snita.bharth@gmail.com",
-    image: "http://t2.gstatic.com/images?q=tbn:ANd9GcRIiu_Tkn8HFUCeI0xElCJ6z2I9_LFob9Wx9GyTu7nseMsASMV5Ug",
-    bio: "Lorem ipsum",
+    image: "public/uploads/images/banksy.jpg",
+    bio: "Hiya",
     password: "password"
   },
   {
