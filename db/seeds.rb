@@ -2,9 +2,11 @@ require "carrierwave"
 require "bcrypt"
 require_relative "../app/models/user.rb"
 require_relative "../app/models/video.rb"
+require_relative "../app/models/comment.rb"
 
 User.destroy_all
 Video.destroy_all
+Comment.destroy_all
 
 [
   { 
@@ -32,9 +34,10 @@ end
 [
   { 
     user_id: User.last.id,
-    video_name: "Hotline Bling",
-    url: "uxpDa-c-4Mc",
-    description: "Lorem ipsum"
+    video_name: "Camping",
+    url: "IMG_0305.MOV",
+    description: "Good Vibes",
+    comment: "Good vibrations"
    },
    {
     user_id: User.first.id,
