@@ -16,7 +16,9 @@ gem "carrierwave"
 gem 'carrierwave-video-thumbnailer'
 gem "bcrypt"
 
+
 group :development do 
   gem "tux", "~> 0.3.0"
   gem "pry"
+  gem "panda", "~> 1.6.0"
 end
