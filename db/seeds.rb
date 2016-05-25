@@ -35,7 +35,7 @@ end
   { 
     user_id: User.last.id,
     video_name: "Camping",
-    url: "IMG_0305.MOV",
+    url: "public/uploads/videos/IMG_0305.MOV",
     description: "Good Vibes",
     comment: "Good vibrations"
    },
